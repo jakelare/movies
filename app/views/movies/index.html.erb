@@ -1,4 +1,4 @@
-<h1><%= @movies.size%> Movies</h1>
+<h1><%= pluralize(@movies.size, 'Movie')%></h1>
 
 
   <% @movies.each do |movie| %>
@@ -7,7 +7,7 @@
     <strong><%= movie.name %></strong>
   </header>
   <p>
-    <%= movie.description %>
+    <%= truncate(movie.description, length: 10, separator: '') %>
   </p>
   <table>
     <tr>
@@ -20,7 +20,7 @@
       </tr>
     <tr>
       <th>Price:</th>
-      <td><%= number_to_currency(movie.price) %></td>
+      <td><%= format_price(movie) %></td>
     </tr>
   </table>
   </article>
