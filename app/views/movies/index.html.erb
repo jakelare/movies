@@ -1,0 +1,13 @@
+<h1><%= @movies.size%> Movies</h1>
+
+<ul>
+  <% @movies.each do |movie| %>
+  <li>
+    <strong><%= movie.name %></strong>
+    in <%= movie.location %>:
+    <%= number_to_currency(movie.price) %>
+  </li>
+  <% end %>
+</ul>
+
+
