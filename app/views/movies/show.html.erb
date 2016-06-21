@@ -1,0 +1,23 @@
+ <article>
+      <header>
+        <strong><%= @movie.name %></strong>
+      </header>
+      <p>
+        <%= @movie.description %>
+      </p>
+      <table>
+        <tr>
+          <th>When:</th>
+          <td><%= @movie.starts_at %></td>
+        </tr>
+        <tr>
+          <th>Where:</th>
+          <td><%= @movie.location %></td>
+        </tr>
+        <tr>
+          <th>Price:</th>
+          <td><%= format_price(@movie) %></td>
+        </tr>
+      </table>
+    </article>
+
