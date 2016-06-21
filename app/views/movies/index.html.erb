@@ -1,13 +1,30 @@
 <h1><%= @movies.size%> Movies</h1>
 
-<ul>
+
   <% @movies.each do |movie| %>
-  <li>
+<article>
+  <header>
     <strong><%= movie.name %></strong>
-    in <%= movie.location %>:
-    <%= number_to_currency(movie.price) %>
-  </li>
+  </header>
+  <p>
+    <%= movie.description %>
+  </p>
+  <table>
+    <tr>
+      <th>When:</th>
+      <td><%= movie.starts_at %></td>
+      </tr>
+    <tr>
+      <th>Where:</th>
+      <td><%= movie.location %></td>
+      </tr>
+    <tr>
+      <th>Price:</th>
+      <td><%= number_to_currency(movie.price) %></td>
+    </tr>
+  </table>
+  </article>
   <% end %>
-</ul>
+
 
 
