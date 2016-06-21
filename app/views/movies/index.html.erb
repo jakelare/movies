@@ -4,7 +4,7 @@
   <% @movies.each do |movie| %>
 <article>
   <header>
-    <strong><%= movie.name %></strong>
+    <strong><%= link_to(movie.name, movie) %></strong>
   </header>
   <p>
     <%= movie.description %>
