@@ -20,11 +20,7 @@
       </tr>
     <tr>
       <th>Price:</th>
-      <% if movie.price == 0 %>
-          <td>Free</td>
-          <% else %>
-          <td><%= number_to_currency(movie.price) %></td>
-          <% end %>
+      <td><%= format_price(movie) %></td>
     </tr>
   </table>
   </article>
